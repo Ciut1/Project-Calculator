@@ -3,51 +3,71 @@ body {
     background-color: green;
 }
 
-.calculator-buttons {
+.header {
+    background-color: blueviolet;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px
+}
+
+.calculator-container {
+    background-color: aqua;
+    height: 500px;
     display: flex;
-    width: 300px;
-    height: 250px;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background-color: brown;
+    width: 400px;
+    height: 400px;
+}
+
+.calculator-display {
+    background-color: yellow;
+    height: 50px;
+    margin: 15px 20px 15px 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+p {
     background-color: red;
+}
+
+.calculator-buttons {
+    background-color: orange;
+    height: 305px;
+    margin: 0 20px 0 20px;
+    display: flex;
+}
+
+.buttons1 {
+    background-color: pink;
+    display: flex;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.buttons2 {
+    background-color: blue;
+    display: flex;
+    flex-direction: column; 
+    width: 110px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#eval {
+    height: 200px;
 }
 
 .key {
     width: 50px;
     height: 50px;
-}
-
-.buttons-1-9-operators {
-    width: 250px;
-    height: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.buttons-final {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-#eval {
-    height: 160px;
-    flex-shrink: 0;
-}
-
-.calculator {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
-    max-width: auto;
-    margin: 0 150px 0 150px;
-}
-
-.calculator-display {
-    display: flex;
-    flex-direction: column;
-    background-color: yellow;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
 }
