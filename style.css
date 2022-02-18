@@ -1,13 +1,12 @@
 body {
     max-height: 1000px;
-    background-color: green;
 }
 
 .header {
     background-color: blueviolet;
-    text-align: center;
-    margin: 0 auto;
-    padding: 10px
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .calculator-container {
@@ -70,4 +69,11 @@ p {
 .key {
     width: 50px;
     height: 50px;
+}
+
+.footer {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
