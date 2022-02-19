@@ -6,45 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project: Calculator | William Hok</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="header">
         <h1>Calculator</h1>
     </div>
-    <div class="calculator-container">
-        <div class="calculator">
-            <div class="calculator-display">
-                <p id="display">0</p>
-            </div>
-
-            <div class="calculator-buttons">
-                <button class="operands" id="zero" value="0" style="grid-area: zero;">0</button>
-                <button class="operands" id="one" value="1" style="grid-area: one;">1</button>
-                <button class="operands" id="two" value="2" style="grid-area: two;">2</button>
-                <button class="operands" id="three" value="3" style="grid-area: three;">3</button>
-                <button class="operands" id="four" value="4" style="grid-area: four;">4</button>
-                <button class="operands" id="five" value="5" style="grid-area: five;">5</button>
-                <button class="operands" id="six" value="6" style="grid-area: six;">6</button>
-                <button class="operands" id="seven" value="7" style="grid-area: seven;">7</button>
-                <button class="operands" id="eight" value="8" style="grid-area: eight;">8</button>
-                <button class="operands" id="nine" value="9" style="grid-area: nine;">9</button>
-                <button class="operators" id="add" value="+" style="grid-area: add;">+</button>
-                <button class="operators" id="subtract" value="-" style="grid-area: subtract;">-</button>
-                <button class="operators" id="multiply" value="*" style="grid-area: multiply;">*</button>
-                <button class="operators" id="divide" value="/" style="grid-area: divide;">/</button>
-                <button id="equal" style="grid-area: equal;">=</button>
-                <button id="decimal" style="grid-area: decimal;">.</button>
-                <button id="plus-minus" style="grid-area: plus-minus;">+/-</button>
-                <button id="del" style="grid-area: del;">DEL</button>
-                <button id="clear-entry" style="grid-area: clear-entry;">CE</button>
-                <button id="clear" style="grid-area: clear;">C</button>
-
-            </div>
+    <div class="calculator">
+        <div class="calculator-display">
+            <div class="previous-operand"></div>
+            <div class="current-operand"></div>
+        </div>
+        <div class="calculator-buttons">
+            <button class="operands" id="zero" value="0" style="grid-area: zero;">0</button>
+            <button class="operands" id="one" value="1" style="grid-area: one;">1</button>
+            <button class="operands" id="two" value="2" style="grid-area: two;">2</button>
+            <button class="operands" id="three" value="3" style="grid-area: three;">3</button>
+            <button class="operands" id="four" value="4" style="grid-area: four;">4</button>
+            <button class="operands" id="five" value="5" style="grid-area: five;">5</button>
+            <button class="operands" id="six" value="6" style="grid-area: six;">6</button>
+            <button class="operands" id="seven" value="7" style="grid-area: seven;">7</button>
+            <button class="operands" id="eight" value="8" style="grid-area: eight;">8</button>
+            <button class="operands" id="nine" value="9" style="grid-area: nine;">9</button>
+            <button class="operators" id="add" value="+" style="grid-area: add;">+</button>
+            <button class="operators" id="subtract" value="-" style="grid-area: subtract;">-</button>
+            <button class="operators" id="multiply" value="*" style="grid-area: multiply;">*</button>
+            <button class="operators" id="divide" value="/" style="grid-area: divide;">/</button>
+            <button id="equal" style="grid-area: equal;">=</button>
+            <button id="decimal" style="grid-area: decimal;">.</button>
+            <button id="del" style="grid-area: del;">DEL</button>
+            <button id="clear" style="grid-area: clear;">C</button>
         </div>
     </div>
-    <div class="footer">
-        <h2>One of the project from The Odin's Project</h2>
-    </div>
   </body>
-  </html>
+</html>

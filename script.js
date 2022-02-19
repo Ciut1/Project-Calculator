@@ -1,19 +1,12 @@
-const display = document.querySelector(".calculator-display")
-const operands = Array.from(document.querySelectorAll(".operands"))
-const operators = Array.from(document.querySelectorAll(".operators"))
-const equal = document.getElementById("equal")
-const decimal = document.getElementById("decimal")
-const plusMinus = document.getElementById("plus-minus")
-const del = document.getElementById("del")
-const clearEntry = document.getElementById("clear-entry")
-const clear = document.getElementById("clear")
+const operandsButton = document.querySelectorAll(".operands")
+const operatorsButton = document.querySelectorAll(".operators")
+const equalButton = document.getElementById("equal")
+const decimalButton = document.getElementById("decimal")
+const deleteButton = document.getElementById("del")
+const clearButton = document.getElementById("clear")
+const previousOperand = document.querySelector(".previous-operand")
+const currentOperand = document.querySelector(".current-operand")
 
-// Making the operands (number 0 to 9)
-operands.forEach((operand) => {
-    operand.addEventListener("click", () => {
-        display.textContent += operand.value;
-    })
-})
 // Calculator operation
 function add(a, b) {
     return a + b
@@ -44,3 +37,15 @@ function operate(a, operator, b) {
         return alert("Error: Undefined operator")
     }
 }
+
+operandsButton.forEach(button => {
+    button.addEventListener("click", () => {
+
+    })
+})
+
+operatorsButton.forEach(button => {
+    button.addEventListener("click", () => {
+        
+    })
+})
