@@ -42,30 +42,6 @@ p {
     display: flex;
 }
 
-.buttons1 {
-    background-color: pink;
-    display: flex;
-    width: 250px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.buttons2 {
-    background-color: blue;
-    display: flex;
-    flex-direction: column; 
-    width: 110px;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
-#eval {
-    height: 200px;
-}
-
 .key {
     width: 50px;
     height: 50px;
