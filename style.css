@@ -39,12 +39,14 @@ p {
     background-color: orange;
     height: 305px;
     margin: 0 20px 0 20px;
-    display: flex;
-}
-
-.key {
-    width: 50px;
-    height: 50px;
+    display: grid;
+    grid-template-areas: 
+    "clear-entry clear del add"
+    "seven eight nine subtract"
+    "four five six multiply"
+    "one two three divide"
+    "plus-minus zero decimal equal";
+    gap: 5px;
 }
 
 .footer {
