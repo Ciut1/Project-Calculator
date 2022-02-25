@@ -4,13 +4,11 @@ const equalButton = document.getElementById("equal")
 const decimalButton = document.getElementById("decimal")
 const deleteButton = document.getElementById("del")
 const clearButton = document.getElementById("clear")
-const previousOperandText = document.querySelector(".previous-operand")
-const currentOperandText = document.querySelector(".current-operand")
+const displaySecondary = document.querySelector(".previous-operand")
+const displayMain = document.querySelector(".current-operand")
 
-let a;
-let b;
-let currentNum;
-let previousNum;
+let firstNumber;
+let secondNumber;
 
 // Calculator operation
 function add(a, b) {
@@ -29,15 +27,6 @@ function division(a, b) {
     return a / b
 }
 
-function clear() {
-    previousOperandText = ""
-    currentOperandText = ""
-}
-
-clearButton.addEventListener("click", () => {
-    clear()
-})
-
 function compute(a, operator, b) {
     switch (operator) {
         case "+":
@@ -51,21 +40,12 @@ function compute(a, operator, b) {
     }
 }
 
-function updateDisplay() {
-    currentOperandText.innerHTML = currentNum
-}
-function appendNum(number) {
-    currentNum = number
+
+function clear() {
+    previousOperandText = ""
+    currentOperandText = ""
 }
 
-operandsButton.forEach(button => {
-    button.addEventListener("click", () => {
-        button.appendNum(currentNum.innerHTML)
-    })
-})
-
-operatorsButton.forEach(button => {
-    button.addEventListener("click", () => {
-        
-    })
+clearButton.addEventListener("click", () => {
+    clear()
 })
