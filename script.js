@@ -4,8 +4,8 @@ const equalButton = document.getElementById("equal")
 const decimalButton = document.getElementById("decimal")
 const deleteButton = document.getElementById("del")
 const clearButton = document.getElementById("clear")
-const displaySecondary = document.querySelector(".previous-operand")
-const displayMain = document.querySelector(".current-operand")
+const displaySecondary = document.querySelector(".secondary-display")
+const displayMain = document.querySelector(".main-display")
 
 let firstNumber;
 let secondNumber;
@@ -42,8 +42,8 @@ function compute(a, operator, b) {
 
 
 function clear() {
-    previousOperandText = ""
-    currentOperandText = ""
+    displayMain = ""
+    displaySecondary = ""
 }
 
 clearButton.addEventListener("click", () => {
