@@ -2,50 +2,54 @@ const operandsButton = document.querySelectorAll(".operands")
 const operatorsButton = document.querySelectorAll(".operators")
 const equalButton = document.getElementById("equal")
 const decimalButton = document.getElementById("decimal")
-const deleteButton = document.getElementById("del")
 const clearButton = document.getElementById("clear")
+const deleteButton = document.getElementById("del")
 const displaySecondary = document.querySelector(".secondary-display")
 const displayMain = document.querySelector(".main-display")
 
 let firstNumber;
 let secondNumber;
 
-// Calculator operation
-function add(a, b) {
-    return a + b
-}
+operandsButton.forEach((operand), () => {
+    operand.addEventListener("click", () => {
 
-function subtract(a, b) {
-    return a - b
-}
-
-function multiplication(a, b) {
-    return a * b
-}
-
-function division(a, b) {
-    return a / b
-}
-
-function compute(a, operator, b) {
-    switch (operator) {
-        case "+":
-            return add(a, b);
-        case "-":
-            return subtract(a,b);
-        case "*":
-            return multiplication(a, b);
-        case "/":
-            return division(a, b);
-    }
-}
-
-
-function clear() {
-    displayMain = ""
-    displaySecondary = ""
-}
+    })
+})
 
 clearButton.addEventListener("click", () => {
-    clear()
+    displayMain.innerHTML = "0"
+    displaySecondary.innerHTML = ""
 })
+
+deleteButton.addEventListener("click", () => {
+    displayMain.value = displayMain.value.slice(0, -1)
+})
+
+function add(firstNumber, secondNumber) {
+    return firstNumber + secondNumber
+}
+
+function subtract(firstNumber, secondNumber) {
+    return firstNumber - secondNumber
+}
+
+function multiplication(firstNumber, secondNumber) {
+    return firstNumber * secondNumber
+}
+
+function division(firstNumber, secondNumber) {
+    return firstNumber / secondNumber
+}
+
+function compute(firstNumber, operator, secondNumber) {
+    switch (operator) {
+        case "+":
+            return add(firstNumber, secondNumber);
+        case "-":
+            return subtract(firstNumber, secondNumber);
+        case "*":
+            return multiplication(firstNumber, secondNumber);
+        case "/":
+            return division(firstNumber, secondNumber);
+    }
+}
