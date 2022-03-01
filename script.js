@@ -7,14 +7,11 @@ const deleteButton = document.getElementById("del")
 const displaySecondary = document.querySelector(".secondary-display")
 const displayMain = document.querySelector(".main-display")
 
-let firstNumber;
-let secondNumber;
-
-operandsButton.forEach((operand), () => {
+/*operandsButton.forEach((operand), () => {
     operand.addEventListener("click", () => {
 
     })
-})
+})*/
 
 clearButton.addEventListener("click", () => {
     displayMain.innerHTML = "0"
@@ -25,31 +22,35 @@ deleteButton.addEventListener("click", () => {
     displayMain.value = displayMain.value.slice(0, -1)
 })
 
-function add(firstNumber, secondNumber) {
-    return firstNumber + secondNumber
-}
+operandsButton.forEach((operand) => {
+    operand.addEventListener("click", () => {
+        displayMain.innerHTML = operand.value
+    })
+})
 
-function subtract(firstNumber, secondNumber) {
-    return firstNumber - secondNumber
-}
-
-function multiplication(firstNumber, secondNumber) {
-    return firstNumber * secondNumber
-}
-
-function division(firstNumber, secondNumber) {
-    return firstNumber / secondNumber
+operatorsButton.forEach((operator) => {
+    operator.addEventListener("click", () => {
+        displayMain.innerHTML = operator.value
+    })
 }
 
 function compute(firstNumber, operator, secondNumber) {
+    let computation;
+    const first = parseFloat(firstNumber)
+    const second = parseFloat(secondNumber)
+    if (isNaN(second) || isNaN(first)) {
     switch (operator) {
         case "+":
-            return add(firstNumber, secondNumber);
+            computation = firstNumber + secondNumber
+            break;
         case "-":
-            return subtract(firstNumber, secondNumber);
+            computation = firstNumber - secondNumber
+            break;
         case "*":
-            return multiplication(firstNumber, secondNumber);
+            computation = firstNumber * secondNumber
+            break;
         case "/":
-            return division(firstNumber, secondNumber);
+            computation = firstNumber / secondNumber
+            break;
     }
 }
