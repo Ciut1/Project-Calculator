@@ -7,50 +7,31 @@ const deleteButton = document.getElementById("del")
 const displaySecondary = document.querySelector(".secondary-display")
 const displayMain = document.querySelector(".main-display")
 
-/*operandsButton.forEach((operand), () => {
-    operand.addEventListener("click", () => {
-
-    })
-})*/
-
-clearButton.addEventListener("click", () => {
-    displayMain.innerHTML = "0"
-    displaySecondary.innerHTML = ""
-})
-
-deleteButton.addEventListener("click", () => {
-    displayMain.value = displayMain.value.slice(0, -1)
-})
-
-operandsButton.forEach((operand) => {
-    operand.addEventListener("click", () => {
-        displayMain.innerHTML = operand.value
-    })
-})
-
-operatorsButton.forEach((operator) => {
-    operator.addEventListener("click", () => {
-        displayMain.innerHTML = operator.value
-    })
+function add(a, b) {
+    return a + b
 }
 
-function compute(firstNumber, operator, secondNumber) {
-    let computation;
-    const first = parseFloat(firstNumber)
-    const second = parseFloat(secondNumber)
-    if (isNaN(second) || isNaN(first)) {
+function subtract(a, b) {
+    return a - b
+}
+
+function multiply(a, b) {
+    return a * b
+}
+
+function divide(a, b) {
+    return a / b
+}
+
+function compute(a, b) {
     switch (operator) {
         case "+":
-            computation = firstNumber + secondNumber
-            break;
+            return add(a, b)
         case "-":
-            computation = firstNumber - secondNumber
-            break;
+            return subtract(a, b)
         case "*":
-            computation = firstNumber * secondNumber
-            break;
+            return multiply(a, b)
         case "/":
-            computation = firstNumber / secondNumber
-            break;
+            return divide(a, b)
     }
 }
