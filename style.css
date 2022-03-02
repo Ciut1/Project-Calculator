@@ -40,11 +40,13 @@ body {
 .calculator-display .secondary-display {
     color: rgb(255, 255, 255, .75);
     font-size: 24px;
+    color: black;
 }
 
 .calculator-display .main-display {
     color: white;
     font-size: 40px;
+    color: black;
 }
 
 .calculator-buttons {
